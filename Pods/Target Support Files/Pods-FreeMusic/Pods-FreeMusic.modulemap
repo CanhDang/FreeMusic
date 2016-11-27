@@ -1,0 +1,6 @@
+framework module Pods_FreeMusic {
+  umbrella header "Pods-FreeMusic-umbrella.h"
+
+  export *
+  module * { export * }
+}

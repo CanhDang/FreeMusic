@@ -1,0 +1,422 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4565994A1DEB2431000F0FE4 /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456599491DEB2431000F0FE4 /* DiscoverViewController.swift */; };
+		4565994D1DEB2482000F0FE4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */; };
+		456599501DEB2A04000F0FE4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565994F1DEB2A04000F0FE4 /* Genre.swift */; };
+		456599521DEB2E93000F0FE4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456599511DEB2E93000F0FE4 /* DownloadManager.swift */; };
+		45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4343D1DEADD220037A574 /* AppDelegate.swift */; };
+		45C434431DEADD220037A574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C434411DEADD220037A574 /* Main.storyboard */; };
+		45C434451DEADD220037A574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C434441DEADD220037A574 /* Assets.xcassets */; };
+		45C434481DEADD220037A574 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C434461DEADD220037A574 /* LaunchScreen.storyboard */; };
+		A2FA06695B3CB12750E051FF /* Pods_FreeMusic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E1EAF4BB79F8DFB528511E6 /* Pods_FreeMusic.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		456599491DEB2431000F0FE4 /* DiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		4565994F1DEB2A04000F0FE4 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		456599511DEB2E93000F0FE4 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		45C4343A1DEADD220037A574 /* FreeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45C4343D1DEADD220037A574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		45C434421DEADD220037A574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		45C434441DEADD220037A574 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		45C434471DEADD220037A574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		45C434491DEADD220037A574 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5688C6787B27F9777CE2EDC9 /* Pods-FreeMusic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMusic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMusic/Pods-FreeMusic.debug.xcconfig"; sourceTree = "<group>"; };
+		8E1EAF4BB79F8DFB528511E6 /* Pods_FreeMusic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeMusic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB1B86FE6E5797ED953BC227 /* Pods-FreeMusic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FreeMusic.release.xcconfig"; path = "Pods/Target Support Files/Pods-FreeMusic/Pods-FreeMusic.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		45C434371DEADD220037A574 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2FA06695B3CB12750E051FF /* Pods_FreeMusic.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		456599361DEB1C90000F0FE4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				456599491DEB2431000F0FE4 /* DiscoverViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4565994B1DEB2469000F0FE4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4565994E1DEB293B000F0FE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4565994F1DEB2A04000F0FE4 /* Genre.swift */,
+				456599511DEB2E93000F0FE4 /* DownloadManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		45C434311DEADD220037A574 = {
+			isa = PBXGroup;
+			children = (
+				45C4343C1DEADD220037A574 /* FreeMusic */,
+				45C4343B1DEADD220037A574 /* Products */,
+				F2C8C8A52969D2D078F17D4D /* Pods */,
+				7D1ACF86CE60FFDD94DC3385 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		45C4343B1DEADD220037A574 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				45C4343A1DEADD220037A574 /* FreeMusic.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45C4343C1DEADD220037A574 /* FreeMusic */ = {
+			isa = PBXGroup;
+			children = (
+				4565994E1DEB293B000F0FE4 /* Models */,
+				4565994B1DEB2469000F0FE4 /* Views */,
+				456599361DEB1C90000F0FE4 /* ViewControllers */,
+				45C4343D1DEADD220037A574 /* AppDelegate.swift */,
+				45C434411DEADD220037A574 /* Main.storyboard */,
+				45C434441DEADD220037A574 /* Assets.xcassets */,
+				45C434461DEADD220037A574 /* LaunchScreen.storyboard */,
+				45C434491DEADD220037A574 /* Info.plist */,
+			);
+			path = FreeMusic;
+			sourceTree = "<group>";
+		};
+		7D1ACF86CE60FFDD94DC3385 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E1EAF4BB79F8DFB528511E6 /* Pods_FreeMusic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F2C8C8A52969D2D078F17D4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5688C6787B27F9777CE2EDC9 /* Pods-FreeMusic.debug.xcconfig */,
+				FB1B86FE6E5797ED953BC227 /* Pods-FreeMusic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		45C434391DEADD220037A574 /* FreeMusic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 45C4344C1DEADD220037A574 /* Build configuration list for PBXNativeTarget "FreeMusic" */;
+			buildPhases = (
+				BA1D3C56DC9342EBC0A60399 /* [CP] Check Pods Manifest.lock */,
+				45C434361DEADD220037A574 /* Sources */,
+				45C434371DEADD220037A574 /* Frameworks */,
+				45C434381DEADD220037A574 /* Resources */,
+				BE29CACD4FBD9FF22D4466CF /* [CP] Embed Pods Frameworks */,
+				AAA45366739A72285E3CECD0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FreeMusic;
+			productName = FreeMusic;
+			productReference = 45C4343A1DEADD220037A574 /* FreeMusic.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		45C434321DEADD220037A574 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Enrik;
+				TargetAttributes = {
+					45C434391DEADD220037A574 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 45C434351DEADD220037A574 /* Build configuration list for PBXProject "FreeMusic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 45C434311DEADD220037A574;
+			productRefGroup = 45C4343B1DEADD220037A574 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				45C434391DEADD220037A574 /* FreeMusic */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		45C434381DEADD220037A574 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C434481DEADD220037A574 /* LaunchScreen.storyboard in Resources */,
+				45C434451DEADD220037A574 /* Assets.xcassets in Resources */,
+				45C434431DEADD220037A574 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AAA45366739A72285E3CECD0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeMusic/Pods-FreeMusic-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA1D3C56DC9342EBC0A60399 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE29CACD4FBD9FF22D4466CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FreeMusic/Pods-FreeMusic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45C434361DEADD220037A574 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */,
+				456599521DEB2E93000F0FE4 /* DownloadManager.swift in Sources */,
+				4565994A1DEB2431000F0FE4 /* DiscoverViewController.swift in Sources */,
+				4565994D1DEB2482000F0FE4 /* CollectionViewCell.swift in Sources */,
+				456599501DEB2A04000F0FE4 /* Genre.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		45C434411DEADD220037A574 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45C434421DEADD220037A574 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		45C434461DEADD220037A574 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				45C434471DEADD220037A574 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		45C4344A1DEADD220037A574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		45C4344B1DEADD220037A574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		45C4344D1DEADD220037A574 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5688C6787B27F9777CE2EDC9 /* Pods-FreeMusic.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FreeMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.FreeMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		45C4344E1DEADD220037A574 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB1B86FE6E5797ED953BC227 /* Pods-FreeMusic.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FreeMusic/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.FreeMusic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		45C434351DEADD220037A574 /* Build configuration list for PBXProject "FreeMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C4344A1DEADD220037A574 /* Debug */,
+				45C4344B1DEADD220037A574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		45C4344C1DEADD220037A574 /* Build configuration list for PBXNativeTarget "FreeMusic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				45C4344D1DEADD220037A574 /* Debug */,
+				45C4344E1DEADD220037A574 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 45C434321DEADD220037A574 /* Project object */;
+}
