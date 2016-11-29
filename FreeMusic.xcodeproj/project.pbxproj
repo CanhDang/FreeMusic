@@ -11,6 +11,9 @@
 		4565994D1DEB2482000F0FE4 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */; };
 		456599501DEB2A04000F0FE4 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4565994F1DEB2A04000F0FE4 /* Genre.swift */; };
 		456599521DEB2E93000F0FE4 /* DownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456599511DEB2E93000F0FE4 /* DownloadManager.swift */; };
+		4567B3BF1DEC8552001C5E1C /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567B3BE1DEC8552001C5E1C /* TableViewCell.swift */; };
+		4567B3C41DEC8A23001C5E1C /* DetailDiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4567B3C31DEC8A23001C5E1C /* DetailDiscoverViewController.swift */; };
+		4583E3051DED172300063C6A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583E3041DED172300063C6A /* Song.swift */; };
 		45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4343D1DEADD220037A574 /* AppDelegate.swift */; };
 		45C434431DEADD220037A574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C434411DEADD220037A574 /* Main.storyboard */; };
 		45C434451DEADD220037A574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C434441DEADD220037A574 /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		4565994F1DEB2A04000F0FE4 /* Genre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		456599511DEB2E93000F0FE4 /* DownloadManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadManager.swift; sourceTree = "<group>"; };
+		4567B3BE1DEC8552001C5E1C /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4567B3C31DEC8A23001C5E1C /* DetailDiscoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailDiscoverViewController.swift; sourceTree = "<group>"; };
+		4583E3041DED172300063C6A /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		45C4343A1DEADD220037A574 /* FreeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C4343D1DEADD220037A574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C434421DEADD220037A574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				456599491DEB2431000F0FE4 /* DiscoverViewController.swift */,
+				4567B3C31DEC8A23001C5E1C /* DetailDiscoverViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -58,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				4565994C1DEB2482000F0FE4 /* CollectionViewCell.swift */,
+				4567B3BE1DEC8552001C5E1C /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -67,6 +75,7 @@
 			children = (
 				4565994F1DEB2A04000F0FE4 /* Genre.swift */,
 				456599511DEB2E93000F0FE4 /* DownloadManager.swift */,
+				4583E3041DED172300063C6A /* Song.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +256,9 @@
 				45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */,
 				456599521DEB2E93000F0FE4 /* DownloadManager.swift in Sources */,
 				4565994A1DEB2431000F0FE4 /* DiscoverViewController.swift in Sources */,
+				4567B3C41DEC8A23001C5E1C /* DetailDiscoverViewController.swift in Sources */,
+				4583E3051DED172300063C6A /* Song.swift in Sources */,
+				4567B3BF1DEC8552001C5E1C /* TableViewCell.swift in Sources */,
 				4565994D1DEB2482000F0FE4 /* CollectionViewCell.swift in Sources */,
 				456599501DEB2A04000F0FE4 /* Genre.swift in Sources */,
 			);

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TableViewCell.layoutSubviews() -&gt; ():TableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageSong.frame.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailDiscoverViewController.setupInit() -&gt; ():DetailDiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.labelGenre.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.imageGenre.image">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;genre-\(genreIndex)&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "self.genreName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

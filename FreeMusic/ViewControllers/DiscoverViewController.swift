@@ -28,14 +28,8 @@ class DiscoverViewController: UIViewController {
         self.collectionView.delegate = self
     
         initListUrl()
-        listUrl.asObservable().bindTo(
-            self.collectionView.rx.items(cellIdentifier: "CollectionCell", cellType: CollectionViewCell.self)
-            
-        ) { (row, url, cell) in
-            
-            cell.setupUI(url: url, row: self.genreIndices[row])
         
-        }.addDisposableTo(self.disposeBag)
+        setupCollectionView()
         
     }
 
@@ -46,6 +40,17 @@ class DiscoverViewController: UIViewController {
         }
     }
     
+    func setupCollectionView() {
+        
+        listUrl.asObservable().bindTo(
+            self.collectionView.rx.items(cellIdentifier: "CollectionCell", cellType: CollectionViewCell.self)
+            
+        ) { (row, url, cell) in
+            
+            cell.setupUI(url: url, row: self.genreIndices[row])
+            
+            }.addDisposableTo(self.disposeBag)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -61,6 +66,22 @@ extension DiscoverViewController: UICollectionViewDelegateFlowLayout  {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize(width: (self.view.frame.width - 30) / 2, height: self.view.frame.height / 3 )
+    }
+    
+}
+
+extension DiscoverViewController: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! CollectionViewCell
+        
+        let detailDiscoverVC = self.storyboard?.instantiateViewController(withIdentifier: "DetailDiscoverViewController") as! DetailDiscoverViewController
+        
+        detailDiscoverVC.genreIndex = genreIndices[indexPath.row]
+        detailDiscoverVC.genreName = cell.labelGenre.text
+        
+        self.navigationController?.pushViewController(detailDiscoverVC, animated: true)
+        
     }
     
 }
