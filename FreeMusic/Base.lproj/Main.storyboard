@@ -129,7 +129,7 @@
                                 <color key="backgroundColor" red="0.16862745100000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="50" id="Isd-hN-pSP" customClass="TableViewCell" customModule="FreeMusic" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="50" id="Isd-hN-pSP" customClass="TableViewCell" customModule="FreeMusic" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Isd-hN-pSP" id="rAu-fU-VYe">
@@ -181,11 +181,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.19607843137254902" green="0.19607843137254902" blue="0.19607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                        <connections>
-                                            <outlet property="imageSong" destination="g9N-bj-UNi" id="DCC-sH-Jby"/>
-                                            <outlet property="labelArtist" destination="9j6-Ks-VCG" id="7az-R6-7to"/>
-                                            <outlet property="labelSong" destination="54C-Ul-KG8" id="Oi6-4Q-BGb"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

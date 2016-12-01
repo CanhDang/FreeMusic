@@ -16,8 +16,8 @@ class Animator: NSObject, UIViewControllerAnimatedTransitioning {
     
     var animationFrame: CGRect?
     
-    var pushDuration: TimeInterval = 2
-    var popDuration: TimeInterval = 2
+    var pushDuration: TimeInterval = 1
+    var popDuration: TimeInterval = 1
     
     var image: UIImage?
     

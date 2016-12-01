@@ -2,17 +2,14 @@
 //  TableViewCell.swift
 //  FreeMusic
 //
-//  Created by Enrik on 11/28/16.
+//  Created by Enrik on 12/1/16.
 //  Copyright © 2016 Enrik. All rights reserved.
 //
 
 import UIKit
-import Alamofire
-import AlamofireImage
 
 class TableViewCell: UITableViewCell {
 
-    
     @IBOutlet weak var imageSong: UIImageView!
     
     @IBOutlet weak var labelSong: UILabel!
@@ -23,12 +20,10 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-
+        
     }
     
     func setupUI(song: Song) {
-        
-       
         
         DownloadManager.shared.downloadImage(url: song.imageUrl) { (image) in
             self.labelSong.text = song.name
@@ -38,11 +33,10 @@ class TableViewCell: UITableViewCell {
             self.imageSong.layer.masksToBounds = true
         }
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
     }
     
-
 }

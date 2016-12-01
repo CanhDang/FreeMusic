@@ -27,6 +27,8 @@ class DetailDiscoverViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    var appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -35,6 +37,8 @@ class DetailDiscoverViewController: UIViewController {
         self.setupInit()
         
         self.tableView.delegate = self
+       
+        self.tableView.register( UINib(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
         
         self.initListSong()
         
@@ -52,6 +56,7 @@ class DetailDiscoverViewController: UIViewController {
 
     func setupInit() {
         let image = UIImage(named: "genre-\(genreIndex!)")
+        print(genreIndex)
         print(image)
         self.imageGenre.image = image
         self.labelGenre.text = self.genreName
@@ -83,7 +88,17 @@ class DetailDiscoverViewController: UIViewController {
 }
 
 extension DetailDiscoverViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+        
+        if appDelegate.havingPlayBar == false {
+            appDelegate.havingPlayBar = true
+            appDelegate.addPlaybarView()
+        }
+        
+        appDelegate.playbarView.song = listSongs.value[indexPath.row]
+        appDelegate.playbarView.initPlay()
+    }
 }
 
 

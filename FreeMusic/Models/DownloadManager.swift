@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 import Alamofire
+import AlamofireImage
 
 class DownloadManager {
     
@@ -90,6 +91,24 @@ class DownloadManager {
                 
             }
         }
+    }
+    
+    func downloadSongLink(urlString: String) {
+        let fixedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        
+        guard let url = URL(string: fixedUrlString!) else {
+            return
+        }
+        
+        Alamofire.request(url).responseJSON { (response) in
+            if let value = response.result.value {
+                let json = JSON(value)
+                
+                print(json)
+            }
+        }
+        
+        
     }
     
 }
