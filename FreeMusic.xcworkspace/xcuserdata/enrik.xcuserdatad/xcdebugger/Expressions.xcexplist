@@ -3,22 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "TableViewCell.layoutSubviews() -&gt; ():TableViewCell.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.imageSong.frame.width">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "DetailDiscoverViewController.setupInit() -&gt; ():DetailDiscoverViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -32,6 +16,46 @@
             </PersistentString>
             <PersistentString
                value = "self.genreName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailDiscoverVC.imageGenre">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailVC.imageGenre.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailVC.imageGenre.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "TableViewCell.layoutSubviews() -&gt; ():TableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.imageSong.frame.width">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

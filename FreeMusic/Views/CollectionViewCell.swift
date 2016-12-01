@@ -24,6 +24,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     func setupUI(url: String, row: Int) {
         
+        self.isUserInteractionEnabled = false
         self.activityIndicator.startAnimating()
         DownloadManager.shared.downloadGenre(url: url) { (title) in
             self.activityIndicator.stopAnimating()
@@ -32,6 +33,7 @@ class CollectionViewCell: UICollectionViewCell {
             self.labelGenre.text = title
             self.imageGenre.image = UIImage(named: "genre-\(row)")
             print("genre-\(row)")
+            self.isUserInteractionEnabled = true 
         }
     }
 }

@@ -22,6 +22,8 @@ class DiscoverViewController: UIViewController {
     
     var disposeBag = DisposeBag()
     
+    let animator = Animator()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,6 +33,8 @@ class DiscoverViewController: UIViewController {
         
         setupCollectionView()
         
+        
+        self.navigationController?.delegate = self
     }
 
     func initListUrl() {
@@ -79,9 +83,25 @@ extension DiscoverViewController: UICollectionViewDelegate {
         
         detailDiscoverVC.genreIndex = genreIndices[indexPath.row]
         detailDiscoverVC.genreName = cell.labelGenre.text
+        //detailDiscoverVC.loadView()
         
+        
+        animator.animationFrame = cell.imageGenre.convert(cell.imageGenre.frame, to: self.view)
+        animator.image = cell.imageGenre.image
+
         self.navigationController?.pushViewController(detailDiscoverVC, animated: true)
         
     }
+
+}
+extension DiscoverViewController: UINavigationControllerDelegate, UIViewControllerTransitioningDelegate {
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              animationControllerFor operation: UINavigationControllerOperation,
+                              from fromVC: UIViewController,
+                              to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return animator 
+    }
     
 }
+

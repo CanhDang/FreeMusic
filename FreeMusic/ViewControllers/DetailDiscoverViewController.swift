@@ -69,7 +69,6 @@ class DetailDiscoverViewController: UIViewController {
         }.addDisposableTo(self.disposeBag)
     }
     
-    
     func initListSong() {
         let genreUrl = String(format: url, self.genreIndex)
         print(genreUrl)

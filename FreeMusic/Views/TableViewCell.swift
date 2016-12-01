@@ -26,18 +26,16 @@ class TableViewCell: UITableViewCell {
 
     }
     
-    override func layoutSubviews() {
-        self.imageSong.layer.cornerRadius = 22.5
-        self.imageSong.layer.masksToBounds = true
-    }
-    
     func setupUI(song: Song) {
         
-        self.labelSong.text = song.name
-        self.labelArtist.text = song.artist
+       
         
         DownloadManager.shared.downloadImage(url: song.imageUrl) { (image) in
+            self.labelSong.text = song.name
+            self.labelArtist.text = song.artist
             self.imageSong.image = image
+            self.imageSong.layer.cornerRadius = self.imageSong.frame.width / 2
+            self.imageSong.layer.masksToBounds = true
         }
     }
 
