@@ -54,7 +54,7 @@ class PlaybarView: UIView {
         
         DownloadManager.shared.downloadSongLink(urlString: urlString, keyword: searchText){
             searchSong in
-            self.initRemoteControl()
+            
             
             PlayMusic.shared.playLink(url: searchSong.link)
             
@@ -68,36 +68,19 @@ class PlaybarView: UIView {
 
     }
     
-    func initRemoteControl() {
-        UIApplication.shared.beginReceivingRemoteControlEvents()
-        self.becomeFirstResponder()
-        
-        do  {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
-            print("AVAudioSession Category Playback OK")
-            do {
-                try AVAudioSession.sharedInstance().setActive(true)
-                print("AVAudioSession is Active")
-            } catch {
-                print(error.localizedDescription)
-            }
-        } catch {
-            print(error.localizedDescription)
-        }
-        
-    }
-
     func setupInfoCenter() {
         let item = PlayMusic.shared.playerItem
-            
+        let image = self.song.image
+        print(image?.size)
         MPNowPlayingInfoCenter.default().nowPlayingInfo = [
             MPMediaItemPropertyArtist: song.artist,
             MPMediaItemPropertyTitle: song.name,
-            //MPMediaItemPropertyArtwork: song.image,
+            MPMediaItemPropertyArtwork: song.image,
             MPMediaItemPropertyPlaybackDuration: NSNumber(value: CMTimeGetSeconds((item?.asset.duration)!)),
             MPNowPlayingInfoPropertyPlaybackRate: NSNumber(value: 1)
         ]
     }
+
     
     func setupCommandCenter() {
         //let commandCenter = MPRemoteCommandCenter.shared()

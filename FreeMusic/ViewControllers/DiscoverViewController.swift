@@ -25,30 +25,15 @@ class DiscoverViewController: UIViewController {
     
     let animator = Animator()
     
-    let reachability = Reachability()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.collectionView.delegate = self
         
         initListUrl()
-        
-        reachability?.whenReachable = { reachability in
-            DispatchQueue.main.async {
+    
                 
-                self.setupCollectionView()
-                
-            }
-            
-        }
-        
-        reachability?.whenUnreachable = { reachability in
-            print("not connect")
-        }
-        
-        try! reachability?.startNotifier()
-        
+        self.setupCollectionView() 
         
         self.navigationController?.delegate = self
     }
