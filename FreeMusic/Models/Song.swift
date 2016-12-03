@@ -7,11 +7,13 @@
 //
 
 import Foundation
+import UIKit
 
 class Song {
-    var imageUrl: String!
-    var name: String!
-    var artist: String!
+    var imageUrl: String
+    var name: String
+    var artist: String
+    var image: UIImage!
     
     init(imageUrl: String, name: String, artist: String) {
         self.imageUrl = imageUrl

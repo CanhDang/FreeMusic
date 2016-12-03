@@ -74,7 +74,7 @@ class DownloadManager {
                         return
                     }
                     
-                    guard let imageUrl = imageArray[0]["label"].string else {
+                    guard let imageUrl = imageArray[2]["label"].string else {
                         return
                     }
                     
@@ -93,18 +93,45 @@ class DownloadManager {
         }
     }
     
-    func downloadSongLink(urlString: String) {
+    func downloadSongLink(urlString: String, keyword: String, completed: @escaping(_ searchSong: SearchSong)->Void) {
         let fixedUrlString = urlString.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         
         guard let url = URL(string: fixedUrlString!) else {
             return
         }
         
+        print(url)
+        var listSearch = [SearchSong]()
+        var scoreMax: Double = -1
         Alamofire.request(url).responseJSON { (response) in
             if let value = response.result.value {
                 let json = JSON(value)
-                
                 print(json)
+                let docs = json["docs"].array
+                for doc in docs! {
+                    let title = doc["title"].string
+                    let artist = doc["artist"].string
+                    let link_download = doc["link_download"]
+                    let link = link_download["128"].string
+                    
+                    let text = title! + " " + artist!
+                    let score = text.score(keyword, fuzziness: 1.0)
+             
+                    let searchSong = SearchSong(title: title!, artist: artist!, link: link!, score: score)
+                    listSearch.append(searchSong)
+                    
+                    if scoreMax < score {
+                        scoreMax = score
+                    }
+                }
+             
+                for searchSong in listSearch {
+                    if searchSong.score == scoreMax {
+                        completed(searchSong)
+                        break
+                    }
+                }
+                
             }
         }
         

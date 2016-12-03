@@ -48,6 +48,7 @@ class DetailDiscoverViewController: UIViewController {
         let tapOutGesture = UITapGestureRecognizer(target: self, action: #selector(popView))
         self.imageGenre.isUserInteractionEnabled = true
         self.imageGenre.addGestureRecognizer(tapOutGesture)
+        
     }
     
     func popView() {
@@ -90,6 +91,8 @@ class DetailDiscoverViewController: UIViewController {
 extension DetailDiscoverViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+        cell.imageChosen.isHidden = false
+        //cell.selectionStyle = .none
         
         if appDelegate.havingPlayBar == false {
             appDelegate.havingPlayBar = true
@@ -98,6 +101,11 @@ extension DetailDiscoverViewController: UITableViewDelegate {
         
         appDelegate.playbarView.song = listSongs.value[indexPath.row]
         appDelegate.playbarView.initPlay()
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
+        cell.imageChosen.isHidden = true
     }
 }
 

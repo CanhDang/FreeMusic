@@ -17,6 +17,9 @@
 		4577099E1DF05CDD00647A25 /* PlaybarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4577099D1DF05CDD00647A25 /* PlaybarView.xib */; };
 		457709A01DF05F0700647A25 /* PlaybarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4577099F1DF05F0700647A25 /* PlaybarView.swift */; };
 		4583E3051DED172300063C6A /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4583E3041DED172300063C6A /* Song.swift */; };
+		45B708061DF1CFFD00CD7E45 /* StringScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B708051DF1CFFD00CD7E45 /* StringScore.swift */; };
+		45B708081DF1DB1100CD7E45 /* SearchSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B708071DF1DB1100CD7E45 /* SearchSong.swift */; };
+		45B7080A1DF1E0A700CD7E45 /* PlayMusic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B708091DF1E0A700CD7E45 /* PlayMusic.swift */; };
 		45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C4343D1DEADD220037A574 /* AppDelegate.swift */; };
 		45C434431DEADD220037A574 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45C434411DEADD220037A574 /* Main.storyboard */; };
 		45C434451DEADD220037A574 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45C434441DEADD220037A574 /* Assets.xcassets */; };
@@ -35,6 +38,9 @@
 		4577099D1DF05CDD00647A25 /* PlaybarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlaybarView.xib; sourceTree = "<group>"; };
 		4577099F1DF05F0700647A25 /* PlaybarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaybarView.swift; sourceTree = "<group>"; };
 		4583E3041DED172300063C6A /* Song.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		45B708051DF1CFFD00CD7E45 /* StringScore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringScore.swift; sourceTree = "<group>"; };
+		45B708071DF1DB1100CD7E45 /* SearchSong.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchSong.swift; sourceTree = "<group>"; };
+		45B708091DF1E0A700CD7E45 /* PlayMusic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayMusic.swift; sourceTree = "<group>"; };
 		45C4343A1DEADD220037A574 /* FreeMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45C4343D1DEADD220037A574 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45C434421DEADD220037A574 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +67,7 @@
 		454EE8F91DF0080800A894E5 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				45B708051DF1CFFD00CD7E45 /* StringScore.swift */,
 				454EE8FA1DF0080800A894E5 /* Transition */,
 			);
 			path = Helpers;
@@ -98,6 +105,8 @@
 			children = (
 				456599511DEB2E93000F0FE4 /* DownloadManager.swift */,
 				4583E3041DED172300063C6A /* Song.swift */,
+				45B708071DF1DB1100CD7E45 /* SearchSong.swift */,
+				45B708091DF1E0A700CD7E45 /* PlayMusic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,7 +215,13 @@
 				TargetAttributes = {
 					45C434391DEADD220037A574 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = YEHSHWL4Z2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -299,8 +314,11 @@
 				454EE8FE1DF0085200A894E5 /* Animator.swift in Sources */,
 				45C4343E1DEADD220037A574 /* AppDelegate.swift in Sources */,
 				456599521DEB2E93000F0FE4 /* DownloadManager.swift in Sources */,
+				45B708081DF1DB1100CD7E45 /* SearchSong.swift in Sources */,
 				457709981DF05C2200647A25 /* TableViewCell.swift in Sources */,
+				45B7080A1DF1E0A700CD7E45 /* PlayMusic.swift in Sources */,
 				457709A01DF05F0700647A25 /* PlaybarView.swift in Sources */,
+				45B708061DF1CFFD00CD7E45 /* StringScore.swift in Sources */,
 				4565994A1DEB2431000F0FE4 /* DiscoverViewController.swift in Sources */,
 				4567B3C41DEC8A23001C5E1C /* DetailDiscoverViewController.swift in Sources */,
 				4583E3051DED172300063C6A /* Song.swift in Sources */,
@@ -429,6 +447,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YEHSHWL4Z2;
 				INFOPLIST_FILE = FreeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.FreeMusic;
@@ -443,6 +462,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YEHSHWL4Z2;
 				INFOPLIST_FILE = FreeMusic/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ddc.FreeMusic;

@@ -22,9 +22,6 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viK-6m-vIh">
-                        <constraints>
-                            <constraint firstAttribute="height" constant="30" id="wi7-bM-dhz"/>
-                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -41,30 +38,40 @@
                         <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-slider-thumb" translatesAutoresizingMaskIntoConstraints="NO" id="wr4-5G-rtv">
+                        <constraints>
+                            <constraint firstAttribute="height" constant="10" id="7Wt-FE-kgP"/>
+                            <constraint firstAttribute="width" constant="10" id="nVY-iV-u1F"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="TYS-LN-grO" secondAttribute="bottom" constant="10" id="1x7-gO-1rO"/>
                     <constraint firstItem="TYS-LN-grO" firstAttribute="leading" secondItem="I4J-Ur-DTV" secondAttribute="trailing" constant="8" id="4B8-yO-mhA"/>
                     <constraint firstItem="viK-6m-vIh" firstAttribute="leading" secondItem="I4J-Ur-DTV" secondAttribute="trailing" constant="8" id="GMV-mY-nm4"/>
                     <constraint firstAttribute="trailing" secondItem="t2b-Eu-8to" secondAttribute="trailing" constant="8" id="O03-ED-ihe"/>
                     <constraint firstItem="t2b-Eu-8to" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="c8J-7n-8PS"/>
-                    <constraint firstItem="I4J-Ur-DTV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="e7M-K4-qxr"/>
+                    <constraint firstItem="I4J-Ur-DTV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="18" id="e7M-K4-qxr"/>
+                    <constraint firstItem="wr4-5G-rtv" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kmV-7J-n4E"/>
                     <constraint firstItem="t2b-Eu-8to" firstAttribute="leading" secondItem="TYS-LN-grO" secondAttribute="trailing" constant="5" id="lbl-v5-wk4"/>
-                    <constraint firstItem="viK-6m-vIh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pic-mI-ocf"/>
+                    <constraint firstItem="viK-6m-vIh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="pic-mI-ocf"/>
+                    <constraint firstItem="wr4-5G-rtv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="4" id="sPZ-rG-mPJ"/>
                     <constraint firstItem="t2b-Eu-8to" firstAttribute="leading" secondItem="viK-6m-vIh" secondAttribute="trailing" constant="5" id="tVm-HR-5qX"/>
                     <constraint firstItem="I4J-Ur-DTV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yKh-il-BWG"/>
+                    <constraint firstItem="TYS-LN-grO" firstAttribute="top" secondItem="viK-6m-vIh" secondAttribute="bottom" constant="8" id="zOk-vV-WNw"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageChosen" destination="wr4-5G-rtv" id="hjJ-5g-20e"/>
                 <outlet property="imageSong" destination="I4J-Ur-DTV" id="x1C-5i-am0"/>
                 <outlet property="labelArtist" destination="TYS-LN-grO" id="Fci-jV-Ha4"/>
                 <outlet property="labelSong" destination="viK-6m-vIh" id="lvC-kr-qeP"/>
             </connections>
-            <point key="canvasLocation" x="68" y="125"/>
+            <point key="canvasLocation" x="67.5" y="124.5"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="img-playlist-add" width="45" height="45"/>
+        <image name="img-slider-thumb" width="9" height="9"/>
     </resources>
 </document>

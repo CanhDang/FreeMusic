@@ -20,10 +20,26 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "PlaybarView.(initPlay() -&gt; ()).(closure #2):PlaybarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchSong.link">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "detailDiscoverVC.imageGenre">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlaybarView.initPlay() -&gt; ():PlaybarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "song.image">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -44,18 +60,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "detailVC.imageGenre.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "TableViewCell.layoutSubviews() -&gt; ():TableViewCell.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.imageSong.frame.width">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

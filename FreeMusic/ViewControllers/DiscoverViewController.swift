@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import ReachabilitySwift
 
 let url = "https://itunes.apple.com/us/rss/topsongs/limit=50/genre=%d/explicit=true/json"
 
@@ -24,14 +25,29 @@ class DiscoverViewController: UIViewController {
     
     let animator = Animator()
     
+    let reachability = Reachability()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.collectionView.delegate = self
-    
+        
         initListUrl()
         
-        setupCollectionView()
+        reachability?.whenReachable = { reachability in
+            DispatchQueue.main.async {
+                
+                self.setupCollectionView()
+                
+            }
+            
+        }
+        
+        reachability?.whenUnreachable = { reachability in
+            print("not connect")
+        }
+        
+        try! reachability?.startNotifier()
         
         
         self.navigationController?.delegate = self

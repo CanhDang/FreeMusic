@@ -11,7 +11,9 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-RY-wQf"/>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.01" translatesAutoresizingMaskIntoConstraints="NO" id="TFL-RY-wQf">
+                    <color key="progressTintColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </progressView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gj7-EJ-GcX">
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="eMD-HP-arv"/>
@@ -58,6 +60,7 @@
                 <outlet property="imageSong" destination="gj7-EJ-GcX" id="uom-rj-enK"/>
                 <outlet property="labelArtist" destination="VUE-kG-0lW" id="h7O-8S-zY0"/>
                 <outlet property="labelName" destination="gUI-gS-AKN" id="Nsl-bq-KjF"/>
+                <outlet property="progressView" destination="TFL-RY-wQf" id="7tB-cc-SrG"/>
             </connections>
             <point key="canvasLocation" x="32.5" y="105"/>
         </view>

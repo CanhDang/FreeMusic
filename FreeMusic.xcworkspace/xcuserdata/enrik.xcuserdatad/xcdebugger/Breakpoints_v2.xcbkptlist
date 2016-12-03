@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreeMusic/ViewControllers/DiscoverViewController.swift"
-            timestampString = "502276668.876398"
+            timestampString = "502465259.368468"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "navigationController(_:animationControllerFor:from:to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -73,29 +73,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreeMusic/Views/PlaybarView/PlaybarView.swift"
-            timestampString = "502297022.312157"
+            filePath = "FreeMusic/Helpers/Transition/Animator.swift"
+            timestampString = "502344737.258075"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "initPlay()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "animateTransition(using:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreeMusic.Animator.animateTransition (using : __ObjC.UIViewControllerContextTransitioning) -&gt; ()"
+                  moduleName = "FreeMusic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/enrik/Desktop/TK/Lab/FreeMusic/FreeMusic/Helpers/Transition/Animator.swift"
+                  timestampString = "502388052.498527"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "FreeMusic.Animator.animateTransition (using : __ObjC.UIViewControllerContextTransitioning) -&gt; ()"
+                  moduleName = "FreeMusic"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/enrik/Desktop/TK/Lab/FreeMusic/FreeMusic/Helpers/Transition/Animator.swift"
+                  timestampString = "502388052.500682"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "254">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreeMusic/Models/DownloadManager.swift"
-            timestampString = "502297678.217009"
+            timestampString = "502388045.236728"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
-            landmarkName = "downloadSongLink(urlString:)"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "downloadSongLink(urlString:keyword:completed:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,13 +137,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreeMusic/ViewControllers/DetailDiscoverViewController.swift"
-            timestampString = "502298093.729702"
+            filePath = "FreeMusic/Views/PlaybarView/PlaybarView.swift"
+            timestampString = "502465349.004168"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "setupInit()"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
+            landmarkName = "setupInfoCenter()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

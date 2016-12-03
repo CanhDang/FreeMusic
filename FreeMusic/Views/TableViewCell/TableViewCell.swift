@@ -16,9 +16,13 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var labelArtist: UILabel!
     
+    @IBOutlet weak var imageChosen: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        self.selectionStyle = .none
         
         
     }
@@ -31,6 +35,8 @@ class TableViewCell: UITableViewCell {
             self.imageSong.image = image
             self.imageSong.layer.cornerRadius = self.imageSong.frame.width / 2
             self.imageSong.layer.masksToBounds = true
+            
+            song.image = image 
         }
     }
     
