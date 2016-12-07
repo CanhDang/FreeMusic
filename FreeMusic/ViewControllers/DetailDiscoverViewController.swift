@@ -49,6 +49,13 @@ class DetailDiscoverViewController: UIViewController {
         self.imageGenre.isUserInteractionEnabled = true
         self.imageGenre.addGestureRecognizer(tapOutGesture)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(moveToPlayView), name: NSNotification.Name(rawValue: "moveToPlayView"), object: nil)
+        
+    }
+    
+    func moveToPlayView() {
+        let playVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayViewController")
+        self.present(playVC!, animated: true, completion: nil)
     }
     
     func popView() {
@@ -92,20 +99,29 @@ extension DetailDiscoverViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         cell.imageChosen.isHidden = false
-        //cell.selectionStyle = .none
+        cell.song = listSongs.value[indexPath.row]
+        cell.song.isChosen = true
         
         if appDelegate.havingPlayBar == false {
+    
             appDelegate.havingPlayBar = true
-            appDelegate.addPlaybarView()
+            let cellRect = tableView.rectForRow(at: indexPath)
+            let animationFrame = tableView.convert(cellRect, to: tableView.superview)
+            appDelegate.addPlaybarView(animationFrame:animationFrame)
         }
+
+        let audioPlayer = AudioPlayer.shared
+        audioPlayer.listSong = self.listSongs.value
+        audioPlayer.songPosition = indexPath.row
+        audioPlayer.setup()
         
-        appDelegate.playbarView.song = listSongs.value[indexPath.row]
-        appDelegate.playbarView.initPlay()
+        self.tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 50))
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         cell.imageChosen.isHidden = true
+        cell.song.isChosen = false
     }
 }
 

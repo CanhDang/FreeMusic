@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "FreeMusic/ViewControllers/DiscoverViewController.swift"
-            timestampString = "502468189.689123"
+            timestampString = "502690681.819902"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "navigationController(_:animationControllerFor:from:to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -121,13 +121,29 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "FreeMusic/Models/DownloadManager.swift"
-            timestampString = "502468902.537787"
+            filePath = "FreeMusic/ViewControllers/PlayViewController.swift"
+            timestampString = "502776250.853145"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "144"
-            endingLineNumber = "144"
-            landmarkName = "downloadSongLink(urlString:keyword:completed:)"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "initPlayView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "FreeMusic/ViewControllers/PlayViewController.swift"
+            timestampString = "502777529.943107"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "215"
+            endingLineNumber = "215"
+            landmarkName = "actionPreviousSong(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

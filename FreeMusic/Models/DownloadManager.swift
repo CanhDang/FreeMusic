@@ -16,37 +16,36 @@ class DownloadManager {
     
     static let shared = DownloadManager()
     
-    let reachability = Reachability()
-    
-    
+   
+
     func downloadGenre(url: String, completed: @escaping(_ string: String) -> Void) {
         
         guard let genreUrl = URL(string: url) else {
             return
         }
         
+        let reachability = Reachability()
         reachability?.whenReachable = { reachability in
-            DispatchQueue.main.async {
+            
+            Alamofire.request(genreUrl).responseJSON { (response) in
                 
-                Alamofire.request(genreUrl).responseJSON { (response) in
+                if let value = response.result.value {
+                    let json = JSON(value)
                     
-                    if let value = response.result.value {
-                        let json = JSON(value)
-                        
-                        let feed = json["feed"]
-                        let title = feed["title"]
-                        guard let label = title["label"].string else {
-                            return
-                        }
-                        let genreName = label.replacingOccurrences(of: "iTunes Store: Top Songs in " , with: "")
-                        completed(genreName)
+                    let feed = json["feed"]
+                    let title = feed["title"]
+                    guard let label = title["label"].string else {
+                        return
                     }
-                    
+                    let genreName = label.replacingOccurrences(of: "iTunes Store: Top Songs in " , with: "")
+                    completed(genreName)
                 }
                 
             }
-            
+
         }
+        
+
         
         reachability?.whenUnreachable = { reachability in
             DispatchQueue.main.async {
@@ -60,18 +59,20 @@ class DownloadManager {
     
     func downloadImage(url: String, completed: @escaping(_ image: UIImage) -> Void) {
         print(url)
+        
+        let reachability = Reachability()
         reachability?.whenReachable = { reachability in
-            DispatchQueue.main.async {
-                
+        
                 Alamofire.request(url).responseImage { (response) in
                     if let image = response.result.value {
                         print(image)
                         completed(image)
                     }
                 }
-            }
         }
-        
+    
+    
+    
         reachability?.whenUnreachable = { reachability in
             print("not connect")
         }
@@ -84,10 +85,10 @@ class DownloadManager {
         guard let genreUrl = URL(string: url) else {
             return
         }
-        
+        let reachability = Reachability()
         reachability?.whenReachable = { reachability in
-            DispatchQueue.main.async {
-                
+        
+
                 Alamofire.request(genreUrl).responseJSON { (response) in
                     if let value = response.result.value {
                         let json = JSON(value)
@@ -124,9 +125,8 @@ class DownloadManager {
                         
                     }
                 }
-            }
+
         }
-        
         reachability?.whenUnreachable = { reachability in
             print("not connect")
         }
@@ -141,17 +141,14 @@ class DownloadManager {
             return
         }
         
-        print(url)
         var listSearch = [SearchSong]()
         var scoreMax: Double = -1
-        
+
+        let reachability = Reachability()
         reachability?.whenReachable = { reachability in
-            DispatchQueue.main.async {
-                
                 Alamofire.request(url).responseJSON { (response) in
                     if let value = response.result.value {
                         let json = JSON(value)
-                        print(json)
                         let docs = json["docs"].array
                         for doc in docs! {
                             let title = doc["title"].string
@@ -179,9 +176,8 @@ class DownloadManager {
                         
                     }
                 }
-            }
+
         }
-        
         reachability?.whenUnreachable = { reachability in
             print("not connect")
         }

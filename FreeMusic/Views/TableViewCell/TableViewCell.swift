@@ -18,12 +18,12 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageChosen: UIImageView!
     
+    var song: Song!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         self.selectionStyle = .none
-        
         
     }
     
@@ -36,7 +36,14 @@ class TableViewCell: UITableViewCell {
             self.imageSong.layer.cornerRadius = self.imageSong.frame.width / 2
             self.imageSong.layer.masksToBounds = true
             
-            song.image = image 
+            song.image = image
+            
+            self.song = song
+            if song.isChosen == false {
+                self.imageChosen.isHidden = true
+            } else {
+                self.imageChosen.isHidden = false 
+            }
         }
     }
     

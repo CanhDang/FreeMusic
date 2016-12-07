@@ -36,6 +36,13 @@ class DiscoverViewController: UIViewController {
         self.setupCollectionView() 
         
         self.navigationController?.delegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(moveToPlayView), name: NSNotification.Name(rawValue: "moveToPlayView"), object: nil)
+    }
+    
+    func moveToPlayView() {
+        let playVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayViewController")
+        self.present(playVC!, animated: true, completion: nil)
     }
 
     func initListUrl() {
