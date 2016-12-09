@@ -226,7 +226,7 @@ class AudioPlayer {
     }
     
     func setupCommandCener() {
-         let commandCenter = MPRemoteCommandCenter.shared()
+        let commandCenter = MPRemoteCommandCenter.shared()
         commandCenter.togglePlayPauseCommand.isEnabled = true
         commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(AudioPlayer.actionPlayPause))
         
@@ -238,4 +238,7 @@ class AudioPlayer {
         
     }
     
+    
 }
+
+

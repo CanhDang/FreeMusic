@@ -67,6 +67,8 @@ class PlayViewController: UIViewController {
         let pressBackward = UITapGestureRecognizer(target: self, action: #selector(self.actionPreviousSong))
         self.buttonPrevious.addGestureRecognizer(pressBackward)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(initPlayView), name: NSNotification.Name(rawValue: "ComeBackApp"), object: nil)
+        
     }
 
     
@@ -91,8 +93,12 @@ class PlayViewController: UIViewController {
         
         self.moveCellTable()
         
-       
-        self.buttonPlay.setImage(UIImage(named: "img-player-pause"), for: .normal)
+        if audioPlayer.playing {
+            self.buttonPlay.setImage(UIImage(named: "img-player-pause"), for: .normal)
+        } else {
+            self.buttonPlay.setImage(UIImage(named: "img-player-play"), for: .normal)
+        }
+        
         
         if audioPlayer.song.image != nil {
             self.imageSong.image = audioPlayer.song.image
@@ -127,9 +133,12 @@ class PlayViewController: UIViewController {
         
         self.slider.setThumbImage(UIImage(named: "img-slider-thumb"), for: .normal)
         self.imageSong.image = audioPlayer.song.image
-        
-        
+
         self.topConstraintSlider.constant = -4
+        
+        if audioPlayer.playing == false {
+            self.buttonPlay.setImage(UIImage(named: "img-player-play"), for: .normal)
+        }
         
         switch audioPlayer.repeating {
         case 0:
@@ -153,7 +162,7 @@ class PlayViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        self.initPlayView()
+       self.initPlayView()
         
     }
     
@@ -281,6 +290,8 @@ class PlayViewController: UIViewController {
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
+    
+    
     
 }
 
