@@ -33,6 +33,8 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var slider: UISlider!
     
+    @IBOutlet weak var previousView: UIView!
+    
     @IBOutlet weak var topConstraintSlider: NSLayoutConstraint!
     
     
@@ -43,6 +45,8 @@ class PlayViewController: UIViewController {
     var disposeBag = DisposeBag()
     
     var pressPrevious = false
+    
+    var pressNext = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,11 +61,12 @@ class PlayViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
  
-        let pressForward = UILongPressGestureRecognizer(target: self, action: #selector(self.actionForward))
+        let pressForward = UITapGestureRecognizer(target: self, action: #selector(self.actionNextSong))
         self.buttonNext.addGestureRecognizer(pressForward)
         
-        let pressBackward = UILongPressGestureRecognizer(target: self, action: #selector(self.actionBackward))
+        let pressBackward = UITapGestureRecognizer(target: self, action: #selector(self.actionPreviousSong))
         self.buttonPrevious.addGestureRecognizer(pressBackward)
+        
     }
 
     
@@ -80,6 +85,8 @@ class PlayViewController: UIViewController {
     }
     
     func initPlayView() {
+        self.pressPrevious = false
+        self.pressNext = false
         self.tableView.reloadData()
         
         self.moveCellTable()
@@ -152,9 +159,6 @@ class PlayViewController: UIViewController {
     
     func updateTime(){
         
-//        
-//        audioPlayer.player.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1/2, Int32(NSEC_PER_SEC)), queue: nil) { (time) in
-//            
             let duration = CMTimeGetSeconds(AudioPlayer.shared.playerItem.duration)
             
             let currentTime = Float(CMTimeGetSeconds(self.audioPlayer.player.currentTime()))
@@ -172,8 +176,18 @@ class PlayViewController: UIViewController {
                 let remainingSecond = Int(round(remainingTime - Float(remainingMinute * 60)))
                 self.labelRemainingTime.text = String(format: "- %d", remainingMinute) + ":" + String(format: "%02d", remainingSecond)
             }
-//
-//        }
+
+        if self.pressPrevious == true {
+            if currentTime > 5 {
+                audioPlayer.playBackward(5)
+            }
+        }
+        
+        if self.pressNext == true {
+            if currentTime < Float(duration) {
+                audioPlayer.playForward(5)
+            }
+        }
     }
     
     
@@ -208,35 +222,46 @@ class PlayViewController: UIViewController {
         }
     }
     
-    @IBAction func actionPreviousSong(_ sender: AnyObject) {
-        if !pressPrevious {
-            audioPlayer.actionPreviousSong()
-            initPlayView()
-        }
-        pressPrevious = false
+    @IBAction func touchUpInsidePrevious(_ sender: AnyObject) {
+        print("touchupInside")
+        self.pressPrevious = false
     }
     
-    @IBAction func actionNextSong(_ sender: AnyObject) {
-        audioPlayer.actionNextSong()
-        initPlayView()
+    @IBAction func touchUpInsideNext(_ sender: AnyObject) {
+        print("touchUpInsideNext")
+        self.pressNext = false
+    }
+    @IBAction func touchDownNext(_ sender: AnyObject) {
+        print("touchDownNext")
+        self.pressNext = true
     }
 
-    func actionForward() {
-        print("forward")
+    func actionNextSong() {
+        print("actionNextSong")
         
+        audioPlayer.actionNextSong()
+        initPlayView()
+        
+        self.pressNext = false
     }
     
-    func actionBackward() {
+    func actionPreviousSong() {
         print("backward")
-        pressPrevious = true
+
+        audioPlayer.actionPreviousSong()
+        initPlayView()
+   
+        self.pressPrevious = false
     }
     
-    
-    @IBAction func touchDown(_ sender: AnyObject) {
+    @IBAction func touchDownPrevious(_ sender: AnyObject) {
         print("*************")
-        print("touchDown")
+        print("touchDownPrevious")
+
+        self.pressPrevious = true
+
     }
-    
+
     @IBAction func actionShuffle(_ sender: AnyObject) {
         if audioPlayer.shuffle == true {
             audioPlayer.shuffle = false
@@ -248,9 +273,14 @@ class PlayViewController: UIViewController {
     }
     
     @IBAction func actionDismissView(_ sender: AnyObject) {
+        
         self.dismiss(animated: true, completion: nil)
     }
     
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        let when = DispatchTime.now() + delay
+        DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
+    }
     
 }
 

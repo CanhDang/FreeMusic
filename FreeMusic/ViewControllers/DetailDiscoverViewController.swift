@@ -53,6 +53,11 @@ class DetailDiscoverViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.tableView.reloadData()
+    }
+    
     func moveToPlayView() {
         let playVC = self.storyboard?.instantiateViewController(withIdentifier: "PlayViewController")
         self.present(playVC!, animated: true, completion: nil)

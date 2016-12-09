@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
+         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.song.name">
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -52,10 +52,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         contextName = "PlayViewController.actionPreviousSong(AnyObject) -&gt; ():PlayViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "detailVC.imageGenre.frame">
+               value = "self.buttonPrevious.inputView">
+            </PersistentString>
+            <PersistentString
+               value = "pressPrevious">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -64,6 +67,14 @@
          <PersistentStrings>
             <PersistentString
                value = "duration">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -115,6 +126,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.song.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "AppDelegate.addPlaybarView(animationFrame : CGRect) -&gt; ():AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
@@ -127,14 +146,6 @@
          <PersistentStrings>
             <PersistentString
                value = "self.slider.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

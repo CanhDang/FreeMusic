@@ -227,17 +227,6 @@
                                             <action selector="actionPlay:" destination="B12-05-0Ak" eventType="touchUpInside" id="Afz-it-Fbi"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3U-m2-kYo">
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="aQo-21-0Az"/>
-                                            <constraint firstAttribute="width" constant="30" id="mFb-Dm-1MZ"/>
-                                        </constraints>
-                                        <state key="normal" image="img-player-previous"/>
-                                        <connections>
-                                            <action selector="actionPreviousSong:" destination="B12-05-0Ak" eventType="touchUpInside" id="sVS-b4-5V6"/>
-                                            <action selector="touchDown:" destination="B12-05-0Ak" eventType="touchDown" id="ADF-pX-4y2"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btK-j6-vuj">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="RVH-wt-NUi"/>
@@ -245,7 +234,8 @@
                                         </constraints>
                                         <state key="normal" image="img-player-next"/>
                                         <connections>
-                                            <action selector="actionNextSong:" destination="B12-05-0Ak" eventType="touchUpInside" id="OY9-QW-IZn"/>
+                                            <action selector="touchDownNext:" destination="B12-05-0Ak" eventType="touchDown" id="8z8-sH-cBI"/>
+                                            <action selector="touchUpInsideNext:" destination="B12-05-0Ak" eventType="touchUpInside" id="SIi-wH-aTm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bn-aj-KkN">
@@ -263,6 +253,17 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t3U-m2-kYo">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="8aU-8S-6YV"/>
+                                            <constraint firstAttribute="width" constant="30" id="HqQ-1i-1qC"/>
+                                        </constraints>
+                                        <state key="normal" image="img-player-previous"/>
+                                        <connections>
+                                            <action selector="touchDownPrevious:" destination="B12-05-0Ak" eventType="touchDown" id="RXi-OI-mFf"/>
+                                            <action selector="touchUpInsidePrevious:" destination="B12-05-0Ak" eventType="touchUpInside" id="1te-yw-qwm"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -274,15 +275,15 @@
                                     <constraint firstItem="btK-j6-vuj" firstAttribute="leading" secondItem="2q9-Jf-C8S" secondAttribute="trailing" constant="50" id="GAl-GF-IM0"/>
                                     <constraint firstAttribute="trailing" secondItem="x6x-or-wd8" secondAttribute="trailing" constant="8" id="IRg-B7-7h7"/>
                                     <constraint firstItem="2q9-Jf-C8S" firstAttribute="centerY" secondItem="IBf-TT-s48" secondAttribute="centerY" id="KvN-sx-eQ9"/>
-                                    <constraint firstItem="t3U-m2-kYo" firstAttribute="centerY" secondItem="2q9-Jf-C8S" secondAttribute="centerY" id="Pxd-YO-z1q"/>
                                     <constraint firstAttribute="trailing" secondItem="urm-AE-Eg7" secondAttribute="trailing" id="Sz7-sf-VdJ"/>
-                                    <constraint firstItem="2q9-Jf-C8S" firstAttribute="leading" secondItem="t3U-m2-kYo" secondAttribute="trailing" constant="50" id="TCE-qZ-JNt"/>
                                     <constraint firstItem="7Bn-aj-KkN" firstAttribute="centerY" secondItem="IBf-TT-s48" secondAttribute="centerY" id="UMd-4i-tzv"/>
                                     <constraint firstItem="urm-AE-Eg7" firstAttribute="top" secondItem="Kbl-CV-ces" secondAttribute="top" constant="-15" id="YDs-IW-OjL"/>
                                     <constraint firstAttribute="height" constant="75" id="afY-cz-XUg"/>
                                     <constraint firstItem="IBf-TT-s48" firstAttribute="leading" secondItem="Kbl-CV-ces" secondAttribute="leading" constant="8" id="g9F-44-zZP"/>
+                                    <constraint firstItem="t3U-m2-kYo" firstAttribute="centerY" secondItem="2q9-Jf-C8S" secondAttribute="centerY" id="hIs-Et-KUy"/>
                                     <constraint firstItem="urm-AE-Eg7" firstAttribute="leading" secondItem="Kbl-CV-ces" secondAttribute="leading" id="iTm-n4-5yb"/>
                                     <constraint firstItem="2q9-Jf-C8S" firstAttribute="centerX" secondItem="Kbl-CV-ces" secondAttribute="centerX" id="iy9-j3-vKj"/>
+                                    <constraint firstItem="2q9-Jf-C8S" firstAttribute="leading" secondItem="t3U-m2-kYo" secondAttribute="trailing" constant="50" id="mCe-B9-mwC"/>
                                     <constraint firstItem="V5Y-cO-u2Z" firstAttribute="top" secondItem="urm-AE-Eg7" secondAttribute="bottom" id="p43-2P-IdY"/>
                                     <constraint firstItem="x6x-or-wd8" firstAttribute="top" secondItem="urm-AE-Eg7" secondAttribute="bottom" id="ynv-ig-laF"/>
                                 </constraints>

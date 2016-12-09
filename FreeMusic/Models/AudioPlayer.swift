@@ -67,13 +67,9 @@ class AudioPlayer {
         } else if self.repeating == 2 {
             if self.isLinkLoaded == true {
                 self.song.isChosen = false
-                if self.shuffle == true {
-                    let random = arc4random_uniform(UInt32(self.listSong.count))
-                    self.songPosition = Int(random)
-                    self.setup()
-                } else {
-                    self.actionNextSong()
-                }
+                
+                self.actionNextSong()
+                
                 self.isLinkLoaded = false
             }
             
@@ -81,7 +77,9 @@ class AudioPlayer {
     }
     
     func setup() {
-        
+        if self.player != nil {
+            self.player.pause()
+        }
         self.song = self.listSong[songPosition]
         self.song.isChosen = true
         
@@ -106,6 +104,12 @@ class AudioPlayer {
     
     
     // MARK: Action
+    func actionPlayShuffle() {
+        let random = arc4random_uniform(UInt32(self.listSong.count))
+        self.songPosition = Int(random)
+        self.setup()
+    }
+    
     func actionRepeatSong(repeating: Int!){
         self.repeating = repeating
     }
@@ -131,25 +135,45 @@ class AudioPlayer {
         self.player.seek(to: time)
     }
     
+    func playForward(_ time: Double) {
+        let nextTime = CMTime(seconds: time, preferredTimescale: 1)
+        self.player.seek(to: self.player.currentTime() + nextTime)
+    }
+    
+    func playBackward(_ time: Double) {
+        let backTime = CMTime(seconds: time, preferredTimescale: 1)
+        self.player.seek(to: self.player.currentTime() - backTime)
+    }
+    
+    
     @objc func actionNextSong() {
         self.song.isChosen = false
-        if songPosition < listSong.count - 1 {
-            songPosition = songPosition + 1
+        if shuffle == true {
+            self.actionPlayShuffle()
         } else {
-            songPosition = 0
+            if songPosition < listSong.count - 1 {
+                songPosition = songPosition + 1
+            } else {
+                songPosition = 0
+            }
+            self.setup()
         }
         
-        self.setup()
     }
     
     @objc func actionPreviousSong() {
-        self.song.isChosen = false 
-        if songPosition > 0 {
-            songPosition = songPosition - 1
+        self.song.isChosen = false
+        if shuffle == true {
+            self.actionPlayShuffle()
         } else {
-            songPosition = listSong.count - 1
+            if songPosition > 0 {
+                songPosition = songPosition - 1
+            } else {
+                songPosition = listSong.count - 1
+            }
+            self.setup()
         }
-        self.setup()
+        
     }
     
     // MARK: Remote Control Center
