@@ -92,13 +92,9 @@ class PlayViewController: UIViewController {
         self.tableView.reloadData()
         
         self.moveCellTable()
-        
-        if audioPlayer.playing {
-            self.buttonPlay.setImage(UIImage(named: "img-player-pause"), for: .normal)
-        } else {
-            self.buttonPlay.setImage(UIImage(named: "img-player-play"), for: .normal)
-        }
-        
+
+        self.buttonPlay.setImage(UIImage(named: "img-player-pause"), for: .normal)
+
         
         if audioPlayer.song.image != nil {
             self.imageSong.image = audioPlayer.song.image
@@ -167,6 +163,12 @@ class PlayViewController: UIViewController {
     }
     
     func updateTime(){
+        
+        if audioPlayer.playing {
+            self.buttonPlay.setImage(UIImage(named: "img-player-pause"), for: .normal)
+        } else {
+            self.buttonPlay.setImage(UIImage(named: "img-player-play"), for: .normal)
+        }
         
             let duration = CMTimeGetSeconds(AudioPlayer.shared.playerItem.duration)
             

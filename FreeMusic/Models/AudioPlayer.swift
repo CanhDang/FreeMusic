@@ -225,19 +225,19 @@ class AudioPlayer {
         
     }
     
-    func setupCommandCener() {
-        let commandCenter = MPRemoteCommandCenter.shared()
-        commandCenter.togglePlayPauseCommand.isEnabled = true
-        commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(AudioPlayer.actionPlayPause))
-        
-        commandCenter.nextTrackCommand.isEnabled = true
-        commandCenter.nextTrackCommand.addTarget(self, action: #selector(self.actionNextSong))
-        
-        commandCenter.previousTrackCommand.isEnabled = true
-        commandCenter.previousTrackCommand.addTarget(self, action: #selector(self.actionPreviousSong))
-        
-    }
-    
+//    func setupCommandCener() {
+//        let commandCenter = MPRemoteCommandCenter.shared()
+//        commandCenter.togglePlayPauseCommand.isEnabled = true
+//        commandCenter.togglePlayPauseCommand.addTarget(self, action: #selector(AudioPlayer.actionPlayPause))
+//        
+//        commandCenter.nextTrackCommand.isEnabled = true
+//        commandCenter.nextTrackCommand.addTarget(self, action: #selector(self.actionNextSong))
+//        
+//        commandCenter.previousTrackCommand.isEnabled = true
+//        commandCenter.previousTrackCommand.addTarget(self, action: #selector(self.actionPreviousSong))
+//        
+//    }
+//    
     
 }
 
