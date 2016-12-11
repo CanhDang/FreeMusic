@@ -29,6 +29,7 @@ class DetailDiscoverViewController: UIViewController {
     
     var appDelegate = UIApplication.shared.delegate as! AppDelegate
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -56,6 +57,25 @@ class DetailDiscoverViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.tableView.reloadData()
+        
+        self.selectCell()
+        
+    }
+    
+    func selectCell() {
+        var indexRow: Int = -1
+        if AudioPlayer.shared.song != nil {
+            for (index,song) in listSongs.value.enumerated() {
+                if song.name == AudioPlayer.shared.song.name {
+                    indexRow = index
+                    break
+                }
+            }
+        }
+        if indexRow > 0 {
+            let indexPath = IndexPath(row: indexRow, section: 0)
+            self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .middle)
+        }
     }
     
     func moveToPlayView() {
@@ -93,8 +113,14 @@ class DetailDiscoverViewController: UIViewController {
         
         DownloadManager.shared.downloadSong(url: genreUrl) { (songs) in
             for song in songs {
+                if AudioPlayer.shared.song != nil {
+                    if song.name == AudioPlayer.shared.song.name {
+                        song.isChosen = AudioPlayer.shared.song.isChosen
+                    }
+                }
                 self.listSongs.value.append(song)
             }
+            self.selectCell()
         }
         
     }
@@ -102,6 +128,7 @@ class DetailDiscoverViewController: UIViewController {
 
 extension DetailDiscoverViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         let cell = tableView.cellForRow(at: indexPath) as! TableViewCell
         cell.imageChosen.isHidden = false
         cell.song = listSongs.value[indexPath.row]
@@ -121,6 +148,8 @@ extension DetailDiscoverViewController: UITableViewDelegate {
         audioPlayer.setup()
         
         self.tableView.tableFooterView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.frame.width, height: 50))
+        
+        
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

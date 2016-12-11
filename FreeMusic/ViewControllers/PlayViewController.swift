@@ -37,7 +37,7 @@ class PlayViewController: UIViewController {
     
     @IBOutlet weak var topConstraintSlider: NSLayoutConstraint!
     
-    
+
     var listSong : Variable<[Song]> = Variable<[Song]>([])
     
     var audioPlayer = AudioPlayer.shared
@@ -68,6 +68,7 @@ class PlayViewController: UIViewController {
         self.buttonPrevious.addGestureRecognizer(pressBackward)
         
         NotificationCenter.default.addObserver(self, selector: #selector(initPlayView), name: NSNotification.Name(rawValue: "ComeBackApp"), object: nil)
+        
         
     }
 
@@ -124,9 +125,13 @@ class PlayViewController: UIViewController {
         }.addDisposableTo(self.disposeBag)
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
+
         self.slider.setThumbImage(UIImage(named: "img-slider-thumb"), for: .normal)
         self.imageSong.image = audioPlayer.song.image
 

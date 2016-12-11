@@ -52,6 +52,8 @@ class AudioPlayer {
         player = AVPlayer(playerItem: playerItem)
         player.rate = 1.0
         player.play()
+        
+
         playing = true
         
         NotificationCenter.default.addObserver(self, selector: #selector(playerItemDidPlayToEnd(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
@@ -77,6 +79,10 @@ class AudioPlayer {
     }
     
     func setup() {
+        if self.song != nil {
+            self.song.isChosen = false
+        }
+        
         if self.player != nil {
             self.player.pause()
         }
@@ -126,6 +132,7 @@ class AudioPlayer {
             self.player.play()
             self.playing = true
         }
+        MPNowPlayingInfoCenter.default().nowPlayingInfo![MPNowPlayingInfoPropertyElapsedPlaybackTime] = NSNumber(value: CMTimeGetSeconds((player.currentTime())))
     }
     
     func actionSliderDuration(_ value: Float) {

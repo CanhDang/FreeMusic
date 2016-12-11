@@ -3,10 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "detailVC.imageGenre.frame">
+               value = "detailDiscoverVC.imageGenre">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -79,6 +79,25 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "PlaybarView.(initPlay() -&gt; ()).(closure #3):PlaybarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.song.isChosen">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailDiscoverViewController.viewWillAppear(Bool) -&gt; ():DetailDiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "AudioPlayer.shared.song">
+            </PersistentString>
+            <PersistentString
+               value = "self.listSongs.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "TableViewCell.layoutSubviews() -&gt; ():TableViewCell.swift">
          <PersistentStrings>
             <PersistentString
@@ -142,18 +161,18 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PlayViewController.viewWillLayoutSubviews() -&gt; ():PlayViewController.swift">
+         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.slider.frame">
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
+         contextName = "PlayViewController.viewWillLayoutSubviews() -&gt; ():PlayViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "detailDiscoverVC.imageGenre">
+               value = "self.slider.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

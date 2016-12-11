@@ -1,0 +1,6 @@
+framework module ACPDownload {
+  umbrella header "ACPDownload-umbrella.h"
+
+  export *
+  module * { export * }
+}

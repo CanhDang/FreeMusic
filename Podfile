@@ -14,7 +14,7 @@ target 'FreeMusic' do
 	pod 'RxSwift',    '~> 3.0'
    	pod 'RxCocoa',    '~> 3.0'	
 	pod 'SlideMenuControllerSwift'
-
+	pod 'ACPDownload', '~> 1.1.0'
 end
 
   post_install do |installer|
