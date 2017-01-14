@@ -15,11 +15,14 @@ class Song {
     var artist: String
     var image: UIImage!
     var isChosen: Bool!
+    var link: String!
+    var isDownloaded: Bool!
     
     init(imageUrl: String, name: String, artist: String) {
         self.imageUrl = imageUrl
         self.name = name
         self.artist = artist
         self.isChosen = false
+        self.isDownloaded = false 
     }
 }

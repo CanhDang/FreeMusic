@@ -3,51 +3,13 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
+         contextName = "specialized DownloadSong.(download(song : Song) -&gt; ()).(closure #1).(closure #1).(closure #2).(closure #2):DownloadSong.swift">
          <PersistentStrings>
             <PersistentString
-               value = "detailDiscoverVC.imageGenre">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PlaybarView.(initPlay() -&gt; ()).(closure #2):PlaybarView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "searchSong.link">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PlayViewController.viewWillAppear(Bool) -&gt; ():PlayViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.slider.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PlayViewController.viewDidLayoutSubviews() -&gt; ():PlayViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.slider.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "DetailDiscoverViewController.setupInit() -&gt; ():DetailDiscoverViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.labelGenre.text">
+               value = "vc.mainViewController?.navigationController?.topViewController">
             </PersistentString>
             <PersistentString
-               value = "self.imageGenre.image">
-            </PersistentString>
-            <PersistentString
-               value = "&quot;genre-\(genreIndex)&quot;">
-            </PersistentString>
-            <PersistentString
-               value = "self.genreName">
+               value = "vc.mainViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -63,18 +25,21 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AudioPlayer.actionSliderDuration(Float) -&gt; ():AudioPlayer.swift">
+         contextName = "DetailDiscoverViewController.viewWillAppear(Bool) -&gt; ():DetailDiscoverViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "duration">
+               value = "AudioPlayer.shared.song">
+            </PersistentString>
+            <PersistentString
+               value = "self.listSongs.value">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         contextName = "AlertViewController.viewDidLayoutSubviews() -&gt; ():AlertViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "detailVC.imageGenre.frame">
+               value = "self.imageSong.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -87,13 +52,48 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DetailDiscoverViewController.viewWillAppear(Bool) -&gt; ():DetailDiscoverViewController.swift">
+         contextName = "PlaybarView.actionDownloadSong(AnyObject) -&gt; ():PlaybarView.swift">
          <PersistentStrings>
             <PersistentString
-               value = "AudioPlayer.shared.song">
+               value = "appDelegate.window?.rootViewController">
             </PersistentString>
             <PersistentString
-               value = "self.listSongs.value">
+               value = "appDelegate.window?.rootViewController?.navigationController?">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlaybarView.setupInfoCenter() -&gt; ():PlaybarView.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.viewWillAppear(Bool) -&gt; ():PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.slider.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.viewWillLayoutSubviews() -&gt; ():PlayViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.slider.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.addPlaybarView(animationFrame : CGRect) -&gt; ():AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "playbarView.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Animator.moveFromCategories(discoverVC : DiscoverViewController, toList : DetailDiscoverViewController, withContext : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -102,25 +102,6 @@
          <PersistentStrings>
             <PersistentString
                value = "self.imageSong.frame.width">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PlaybarView.initPlay() -&gt; ():PlaybarView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "song.image">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "PlaybarView.setupInfoCenter() -&gt; ():PlaybarView.swift">
-      </ContextState>
-      <ContextState
-         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "response.result">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -145,22 +126,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.song.name">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "AppDelegate.addPlaybarView(animationFrame : CGRect) -&gt; ():AppDelegate.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "playbarView.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
          <PersistentStrings>
             <PersistentString
@@ -169,10 +134,75 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "PlayViewController.viewWillLayoutSubviews() -&gt; ():PlayViewController.swift">
+         contextName = "DetailDiscoverViewController.setupInit() -&gt; ():DetailDiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.labelGenre.text">
+            </PersistentString>
+            <PersistentString
+               value = "self.imageGenre.image">
+            </PersistentString>
+            <PersistentString
+               value = "&quot;genre-\(genreIndex)&quot;">
+            </PersistentString>
+            <PersistentString
+               value = "self.genreName">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlaybarView.initPlay() -&gt; ():PlaybarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "song.image">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.song.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DiscoverViewController.collectionView(UICollectionView, didSelectItemAt : IndexPath) -&gt; ():DiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "detailDiscoverVC.imageGenre">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlayViewController.viewDidLayoutSubviews() -&gt; ():PlayViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "self.slider.frame">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AudioPlayer.actionSliderDuration(Float) -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "duration">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PlaybarView.(initPlay() -&gt; ()).(closure #2):PlaybarView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "searchSong.link">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "response.result">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

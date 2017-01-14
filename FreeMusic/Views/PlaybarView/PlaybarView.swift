@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import MediaPlayer
-
+import ACPDownload
 
 class PlaybarView: UIView {
     var song: Song!
@@ -23,10 +23,21 @@ class PlaybarView: UIView {
     
     @IBOutlet weak var progressView: UIProgressView!
     
+    @IBOutlet weak var downloadView: ACPDownloadView!
 
+    @IBOutlet weak var buttonDownload: UIButton!
+    
     func initPlay() {
         
         self.progressView.progress = 0
+        
+        if self.song.isDownloaded == true {
+            self.buttonDownload.isHidden = true
+            self.downloadView.isHidden = true
+        } else {
+            self.downloadView.isHidden = true
+            self.buttonDownload.isHidden = false 
+        }
         
         if self.song.image != nil {
             DispatchQueue.main.async {
@@ -60,5 +71,23 @@ class PlaybarView: UIView {
     func moveToPlayView() {
         NotificationCenter.default.post(name: NSNotification.Name(rawValue: "moveToPlayView"), object: nil)
     }
+    
+    @IBAction func actionDownloadSong(_ sender: AnyObject) {
+        
+        
+        let vc = UIApplication.topViewController()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
+        
+        alertVC.song = self.song
+        alertVC.modalPresentationStyle = .overCurrentContext
+        alertVC.modalTransitionStyle = .crossDissolve
+        vc?.present(alertVC, animated: true, completion: { 
+            vc?.view.alpha = 0.5 
+        })
+        
+    }
+    
     
 }

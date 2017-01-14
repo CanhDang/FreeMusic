@@ -11,13 +11,12 @@ import SwiftyJSON
 import Alamofire
 import AlamofireImage
 import ReachabilitySwift
+import RealmSwift
 
 class DownloadManager {
     
     static let shared = DownloadManager()
     
-   
-
     func downloadGenre(url: String, completed: @escaping(_ string: String) -> Void) {
         
         guard let genreUrl = URL(string: url) else {
@@ -116,8 +115,18 @@ class DownloadManager {
                                 return
                             }
                             
+                            
+                            let realm = try! Realm()
+                            
                             let song = Song(imageUrl: imageUrl, name: name, artist: artist)
                             listSong.append(song)
+                            
+                            let objects = realm.objects(OfflineSong.self)
+                            for object in objects {
+                                if object.name == song.name {
+                                    song.isDownloaded = true
+                                }
+                            }
                             
                         }
                         

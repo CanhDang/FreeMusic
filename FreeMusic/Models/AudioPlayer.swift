@@ -95,7 +95,9 @@ class AudioPlayer {
 
         DownloadManager.shared.downloadSongLink(urlString: urlString, keyword: searchText){
             searchSong in
-
+            
+            self.song.link = searchSong.link
+            
             self.playLink(url: searchSong.link)
             
             self.setupInfoCenter()

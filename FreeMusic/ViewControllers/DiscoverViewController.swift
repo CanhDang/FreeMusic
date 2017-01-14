@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import ReachabilitySwift
+import SlideMenuControllerSwift
 
 let url = "https://itunes.apple.com/us/rss/topsongs/limit=50/genre=%d/explicit=true/json"
 
@@ -28,6 +29,8 @@ class DiscoverViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.addLeftBarButtonWithImage(UIImage(named: "menu-discovery")!)
+        
         self.collectionView.delegate = self
         
         initListUrl()

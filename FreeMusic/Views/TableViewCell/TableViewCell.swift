@@ -18,6 +18,9 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var imageChosen: UIImageView!
     
+    @IBOutlet weak var buttonDownload: UIButton!
+    
+    
     var song: Song!
     
     override func awakeFromNib() {
@@ -44,6 +47,12 @@ class TableViewCell: UITableViewCell {
             } else {
                 self.imageChosen.isHidden = false 
             }
+            
+            if song.isDownloaded == true {
+                self.buttonDownload.isHidden = true
+            } else {
+                self.buttonDownload.isHidden = false 
+            }
         }
     }
     
@@ -51,5 +60,20 @@ class TableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         
     }
+    
+    @IBAction func actionDownloadSong(_ sender: AnyObject) {
+        let vc = UIApplication.topViewController()
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let alertVC = storyboard.instantiateViewController(withIdentifier: "AlertViewController") as! AlertViewController
+        
+        alertVC.song = self.song
+        alertVC.modalPresentationStyle = .overCurrentContext
+        alertVC.modalTransitionStyle = .crossDissolve
+        vc?.present(alertVC, animated: true, completion: {
+            vc?.view.alpha = 0.5
+        })
+    }
+    
     
 }

@@ -8,6 +8,7 @@
 
 import UIKit
 import MediaPlayer
+import SlideMenuControllerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,10 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var havingPlayBar: Bool = false
     
     var playbarView: PlaybarView!
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let menuVC = storyboard.instantiateViewController(withIdentifier: "MenuViewController")
+        let naviVC = storyboard.instantiateViewController(withIdentifier: "NavigationController")
+        let slideVC = SlideMenuController(mainViewController: naviVC, leftMenuViewController: menuVC)
+        slideVC.closeLeft()
+        self.window?.rootViewController = slideVC
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
     

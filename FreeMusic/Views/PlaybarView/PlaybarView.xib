@@ -30,18 +30,29 @@
                     <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oqh-Mw-l7a" customClass="ACPDownloadView">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="YUQ-Rg-Qd4"/>
+                        <constraint firstAttribute="width" constant="45" id="pOi-y2-Qer"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBJ-pA-iXu">
                     <constraints>
                         <constraint firstAttribute="width" constant="45" id="fOs-BO-eKV"/>
                         <constraint firstAttribute="height" constant="45" id="hku-vG-EiL"/>
                     </constraints>
                     <state key="normal" image="img-playlist-add"/>
+                    <connections>
+                        <action selector="actionDownloadSong:" destination="iN0-l3-epB" eventType="touchUpInside" id="rLK-m7-jNW"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.1960784314" green="0.1960784314" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="nBJ-pA-iXu" firstAttribute="leading" secondItem="gUI-gS-AKN" secondAttribute="trailing" constant="5" id="7Ib-6X-bb2"/>
                 <constraint firstItem="nBJ-pA-iXu" firstAttribute="leading" secondItem="VUE-kG-0lW" secondAttribute="trailing" constant="5" id="7qc-qx-OGh"/>
+                <constraint firstAttribute="trailing" secondItem="Oqh-Mw-l7a" secondAttribute="trailing" constant="8" id="DDr-hu-hgE"/>
                 <constraint firstItem="TFL-RY-wQf" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EQD-Hv-dWo"/>
                 <constraint firstItem="nBJ-pA-iXu" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Eka-ZW-g4B"/>
                 <constraint firstItem="TFL-RY-wQf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Hji-3j-WM8"/>
@@ -51,12 +62,15 @@
                 <constraint firstItem="gUI-gS-AKN" firstAttribute="leading" secondItem="gj7-EJ-GcX" secondAttribute="trailing" constant="8" id="YxD-G2-72t"/>
                 <constraint firstItem="VUE-kG-0lW" firstAttribute="leading" secondItem="gj7-EJ-GcX" secondAttribute="trailing" constant="8" id="fJ6-KS-cP9"/>
                 <constraint firstItem="gj7-EJ-GcX" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gON-L8-bfb"/>
+                <constraint firstItem="Oqh-Mw-l7a" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="h9X-qf-Foj"/>
                 <constraint firstAttribute="bottom" secondItem="VUE-kG-0lW" secondAttribute="bottom" constant="2" id="j7p-rY-Lok"/>
                 <constraint firstItem="gj7-EJ-GcX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="ncE-fk-H2W"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="buttonDownload" destination="nBJ-pA-iXu" id="eMM-wn-SKX"/>
+                <outlet property="downloadView" destination="Oqh-Mw-l7a" id="KNn-zH-cm1"/>
                 <outlet property="imageSong" destination="gj7-EJ-GcX" id="uom-rj-enK"/>
                 <outlet property="labelArtist" destination="VUE-kG-0lW" id="h7O-8S-zY0"/>
                 <outlet property="labelName" destination="gUI-gS-AKN" id="Nsl-bq-KjF"/>

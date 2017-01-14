@@ -297,9 +297,7 @@ class PlayViewController: UIViewController {
         let when = DispatchTime.now() + delay
         DispatchQueue.main.asyncAfter(deadline: when, execute: closure)
     }
-    
-    
-    
+
 }
 
 extension PlayViewController: UITableViewDelegate {
