@@ -3,13 +3,10 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "specialized DownloadSong.(download(song : Song) -&gt; ()).(closure #1).(closure #1).(closure #2).(closure #2):DownloadSong.swift">
+         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
          <PersistentStrings>
             <PersistentString
-               value = "vc.mainViewController?.navigationController?.topViewController">
-            </PersistentString>
-            <PersistentString
-               value = "vc.mainViewController">
+               value = "response.result">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -48,6 +45,14 @@
          <PersistentStrings>
             <PersistentString
                value = "self.song.isChosen">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "DetailDiscoverViewController.tableView(UITableView, didDeselectRowAt : IndexPath) -&gt; ():DetailDiscoverViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.row">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -126,14 +131,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "detailVC.imageGenre.frame">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "DetailDiscoverViewController.setupInit() -&gt; ():DetailDiscoverViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -151,6 +148,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.song.name">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "PlaybarView.initPlay() -&gt; ():PlaybarView.swift">
          <PersistentStrings>
             <PersistentString
@@ -159,10 +164,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "AudioPlayer.playerItemDidPlayToEnd(Notification) -&gt; ():AudioPlayer.swift">
+         contextName = "Animator.animateTransition(using : UIViewControllerContextTransitioning) -&gt; ():Animator.swift">
          <PersistentStrings>
             <PersistentString
-               value = "self.song.name">
+               value = "detailVC.imageGenre.frame">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -199,10 +204,13 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "DownloadManager.(downloadImage(url : String, completed : (UIImage) -&gt; ()) -&gt; ()).(closure #1):DownloadManager.swift">
+         contextName = "specialized DownloadSong.(download(song : Song) -&gt; ()).(closure #1).(closure #1).(closure #2).(closure #2):DownloadSong.swift">
          <PersistentStrings>
             <PersistentString
-               value = "response.result">
+               value = "vc.mainViewController?.navigationController?.topViewController">
+            </PersistentString>
+            <PersistentString
+               value = "vc.mainViewController">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
